@@ -1,10 +1,10 @@
 {
-  "name": "ai-roleplay",
+  "name": "alexis-ai-chat",
   "version": "1.0.0",
   "description": "AI Roleplay Experience with Alexis",
-  "main": "index.js",
+  "main": "api/chat.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node api/chat.js"
   },
   "dependencies": {
     "express": "^4.17.1",
