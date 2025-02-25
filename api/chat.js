@@ -5,7 +5,7 @@ module.exports = (req, res) => {
 
     const userMessage = req.body.message || "Hello";
 
-    // AI Response (Replace with real logic later)
+    // AI Response Simulation (Replace with real AI logic later)
     const aiResponse = `Alexis: Hmm... I'm thinking about that. Here's what I feel about "${userMessage}".`;
 
     res.status(200).json({ response: aiResponse });
