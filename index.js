@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
     res.send("Alexis AI Roleplay Server is Running!");
 });
 
-// Fixed API Chat Route
+// FIXED API Chat Route
 app.post("/api/chat", (req, res) => {
     const userMessage = req.body.message;
 
