@@ -5,13 +5,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Root Route to Check Server Status
+// Root route to check if the server is running
 app.get("/", (req, res) => {
     res.send("Alexis AI Roleplay Server is Running!");
 });
 
 // FIXED: Correct API Route for AI Chat Responses
-app.post("/chat", (req, res) => {
+app.post("/api/chat", (req, res) => {
     const userMessage = req.body.message;
 
     // Simple AI Response (Replace with real AI logic later)
