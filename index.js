@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 app.post("/api/chat", (req, res) => {
     const userMessage = req.body.message;
 
-    // AI Response Generation (Simple Example)
+    // AI Response Simulation (Replace with real AI logic later)
     const aiResponse = `Alexis: Hmm... I'm thinking about that. Here's what I feel about "${userMessage}".`;
     
     res.json({ response: aiResponse });
