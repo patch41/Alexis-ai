@@ -1,10 +1,10 @@
-const { OpenAI } = require("openai"); // Fixing import issue
-const express = require("express"); 
-const cors = require("cors"); 
-const bodyParser = require("body-parser"); 
+const OpenAI = require("openai"); // Fixing import issue
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
 require("dotenv").config(); // Load OpenAI API key securely
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const openai = new OpenAI.OpenAI({ apiKey: process.env.OPENAI_API_KEY }); // Correcting the constructor
 
 const app = express();
 app.use(cors());
