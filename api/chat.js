@@ -1,4 +1,4 @@
-const OpenAI = require("openai"); 
+const { OpenAI } = require("openai"); // Fixing import issue
 const express = require("express"); 
 const cors = require("cors"); 
 const bodyParser = require("body-parser"); 
@@ -15,14 +15,12 @@ app.post("/api/chat", async (req, res) => {
         return res.status(400).json({ error: "Message is required" });
     }
 
-    const userMessage = req.body.message;
-
     try {
         const response = await openai.chat.completions.create({
             model: "gpt-4-turbo",
             messages: [
-                { role: "system", content: "You are Alexis, an AI roleplay character. Respond in a natural, immersive, and engaging way. Keep a realistic tone." },
-                { role: "user", content: userMessage }
+                { role: "system", content: "You are Alexis, an AI roleplay character. Respond in a natural, immersive, and engaging way." },
+                { role: "user", content: req.body.message }
             ],
             max_tokens: 200
         });
